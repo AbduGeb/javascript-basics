@@ -1,41 +1,64 @@
-const createPerson = (name, age) => {
-  // your code here
+const createPerson = (name, age) => {              //DONE
+  return {
+    name:name,
+    age:age
+  }
 };
 
-const getName = object => {
-  // your code here
+const getName = object => {              //DONE
+  return object.name;
 };
 
-const getProperty = (property, object) => {
-  // your code here
+const getProperty = (property, object) => {              //DONE
+  if (property == "name" ) {
+    return object.name;
+  } else if (property == "age") {
+  return object.age;
+  } else {
+    return undefined;
+  }
+  };
+
+const hasProperty = (property, object) => {              //DONE
+  if ( object.hasOwnProperty(property)) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
-const hasProperty = (property, object) => {
-  // your code here
-};
-
-const isOver65 = person => {
-  // your code here
+const isOver65 = person => {              //DONE
+  if ( person.age > 65 ) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 const getAges = people => {
-  // your code here
+return people.map(person => person.age)
 };
 
 const findByName = (name, people) => {
-  // your code here
+  return people.find(person => person.name === name )
 };
 
 const findHondas = cars => {
-  // your code here
+  return cars.filter(car => car.manufacturer === "Honda");
 };
 
 const averageAge = people => {
-  // your code here
+  
 };
 
 const createTalkingPerson = (name, age) => {
-  // your code here
+ return {
+  name: name,
+  age: age,
+  introduce: (friend) => {
+    return "Hi " + friend + ", my name is " + name + " and I am " + age + "!";
+  }
+ }
 };
 
 module.exports = {

@@ -1,61 +1,115 @@
-function negate(a) {
-  // your code here
+function negate(a) {              //DONE
+  return !a
 };
 
-function both(a, b) {
-  // your code here
+function both(a, b) {              //DONE
+  if (a === true && b === true) {
+    return true
+  } else {
+    return false
+  }
+}
+
+function either(a, b) {              //DONE
+  if (a === true || b === true) {
+    return true
+  } else {
+    return false
+  }
 };
 
-function either(a, b) {
-  // your code here
+function none(a, b) {              //DONE
+  if ( a === false && b === false) {
+    return true
+  } else {
+    return false
+  }
 };
 
-function none(a, b) {
-  // your code here
-};
-
-function one(a, b) {
-  // your code here
+function one(a, b) {              //DONE
+  if ( a !== b ) {
+    return true
+  } else {
+    return false
+  }
 };
 
 function truthiness(a) {
-  // your code here
+
+return !!a
 };
 
-function isEqual(a, b) {
-  // your code here
+function isEqual(a, b) {              //DONE
+  if (a === b) {
+    return true
+  } else {
+    return false
+  }
 };
 
-function isGreaterThan(a, b) {
-  // your code here
+function isGreaterThan(a, b) {              //DONE
+  if ( a > b ) {
+    return true
+  } else {
+    return false
+  }
 };
 
-function isLessThanOrEqualTo(a, b) {
-  // your code here
+function isLessThanOrEqualTo(a, b) {              //DONE
+  if ( a <= b ) {
+    return true
+  } else {
+    return false
+  }
 };
 
-function isOdd(a) {
-  // your code here
+function isOdd(a) {              //DONE
+  if ( a % 2 === 1 ) {
+    return true
+  } else {
+    return false
+  }
 };
 
-function isEven(a) {
-  // your code here
+function isEven(a) {              //DONE
+  if ( a % 2 === 0 ) {
+    return true
+  } else {
+    return false
+  }};
+
+function isSquare(a) {              //DONE
+  if ( a === 0 || a > 0 && Math.sqrt(a) % 1 === 0) {
+    return true 
+  } else {
+    return false
+  }
 };
 
-function isSquare(a) {
-  // your code here
+function startsWith(char, string) {              //DONE
+  if ( char === string.charAt(0)) {
+    return true
+  } else {
+    return false
+  }
 };
 
-function startsWith(char, string) {
-  // your code here
+function containsVowels(string) {              //DONE
+  let pattern = /[aeiou]/i;
+  if ( string.match(pattern)) {
+    return true
+  } else {
+    return false
+  }
 };
 
-function containsVowels(string) {
-  // your code here
-};
-
-function isLowerCase(string) {
-  // your code here
+function isLowerCase(string) {              //DONE
+  const word = string;
+  if ( word === word.toLowerCase()) {
+    return true;
+  }  else { 
+    return false;
+  }
 };
 
 module.exports = {
